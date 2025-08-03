@@ -31,44 +31,32 @@ This is a task-tracking API for managers and operations teams to create, assign,
 src/
 └── main/
     ├── java/
-    │   └── com.railse.hiring.workforcemgmt/
-    │       ├── common/
-    │       │   ├── exception/
-    │       │   │   ├── CustomExceptionHandler.java
-    │       │   │   └── ResourceNotFoundException.java
-    │       │   └── model/
-    │       │       ├── enums/
-    │       │       │   └── ReferenceType.java
-    │       │       └── response/
-    │       │           └── ApiResponse.java
-    │       ├── config/
-    │       │   ├── WebSecurityConfig.java     # Spring Security
-    │       │   └── SwaggerConfig.java         # Swagger API Docs (optional)
-    │       ├── controller/
-    │       │   └── TaskManagementController.java
-    │       ├── dto/
-    │       │   ├── TaskDTO.java
-    │       │   └── UserDTO.java
-    │       ├── mapper/
-    │       │   └── ITaskManagementMapper.java
-    │       ├── model/
-    │       │   ├── Task.java
-    │       │   └── User.java
-    │       ├── repository/
-    │       │   ├── TaskRepository.java
-    │       │   └── UserRepository.java
-    │       ├── service/
-    │           ├── impl/
-    │           │   └── TaskManagementServiceImpl.java
-    │           └── TaskManagementService.java
-    │       
-    │       
-    │    
-    │      
-    └── resources/
-        ├── application.properties
-        ├── static/                  # static resources like images, js, css
-        ├── templates/               # Thymeleaf or other templates if needed
+        └── com/
+            └── railse/
+                └── hiring/
+                    └── workforcemgmt/
+                        ├── common/
+                        │   ├── exception/
+                        │   │   ├── CustomExceptionHandler.java
+                        │   │   └── ResourceNotFoundException.java
+                        │   └── model/
+                        │       ├── enums/
+                        │       │   └── ReferenceType.java
+                        │       └── response/
+                        ├── controller/
+                        │   └── TaskManagementController.java
+                        ├── dto/
+                        ├── mapper/
+                        │   └── ITaskManagementMapper.java
+                        ├── model/
+                        ├── repository/
+                        ├── service/
+                        │   ├── impl/
+                        │   │   └── TaskManagementService.java
+                        │   └── TaskManagementService.java (interface)
+                        └── WorkforceMgmtApplication.java
+    
+
        
 
 

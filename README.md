@@ -39,20 +39,36 @@ src/
     │       │   └── model/
     │       │       ├── enums/
     │       │       │   └── ReferenceType.java
-    │       │       └── response/    (for API response wrappers or response DTOs)
+    │       │       └── response/
+    │       │           └── ApiResponse.java
+    │       ├── config/
+    │       │   ├── WebSecurityConfig.java     # Spring Security
+    │       │   └── SwaggerConfig.java         # Swagger API Docs (optional)
     │       ├── controller/
     │       │   └── TaskManagementController.java
-    │       ├── dto/                 (for Data Transfer Objects)
-    │       ├── mapper/              (MapStruct or manual mappers)
+    │       ├── dto/
+    │       │   ├── TaskDTO.java
+    │       │   └── UserDTO.java
+    │       ├── mapper/
     │       │   └── ITaskManagementMapper.java
-    │       ├── model/               (for JPA Entities)
-    │       ├── repository/          (Spring Data JPA Repositories)
+    │       ├── model/
+    │       │   ├── Task.java
+    │       │   └── User.java
+    │       ├── repository/
+    │       │   ├── TaskRepository.java
+    │       │   └── UserRepository.java
     │       ├── service/
-    │       │   ├── impl/
-    │       │   │   └── TaskManagementService.java
-    │       │   └── (interface for TaskManagementService)
-    │       └── WorkforceMgmtApplication.java
+    │           ├── impl/
+    │           │   └── TaskManagementServiceImpl.java
+    │           └── TaskManagementService.java
+    │       
+    │       
+    │    
+    │      
     └── resources/
-        ├── application.properties (or application.yml)
-        └── static/, templates/, etc.
+        ├── application.properties
+        ├── static/                  # static resources like images, js, css
+        ├── templates/               # Thymeleaf or other templates if needed
+       
+
 

@@ -28,34 +28,37 @@ This is a task-tracking API for managers and operations teams to create, assign,
 
 ## 📂 Project Structure
 
-src/
-└── main/
-    ├── java/
-        └── com/
-            └── railse/
-                └── hiring/
-                    └── workforcemgmt/
-                        ├── common/
-                        │   ├── exception/
-                        │   │   ├── CustomExceptionHandler.java
-                        │   │   └── ResourceNotFoundException.java
-                        │   └── model/
-                        │       ├── enums/
-                        │       │   └── ReferenceType.java
-                        │       └── response/
-                        ├── controller/
-                        │   └── TaskManagementController.java
-                        ├── dto/
-                        ├── mapper/
-                        │   └── ITaskManagementMapper.java
-                        ├── model/
-                        ├── repository/
-                        ├── service/
-                        │   ├── impl/
-                        │   │   └── TaskManagementService.java
-                        │   └── TaskManagementService.java (interface)
-                        └── WorkforceMgmtApplication.java
-    
+📂 src
+└── 📂 main
+    ├── 📂 java
+    │   └── 📂 com
+    │       └── 📂 railse
+    │           └── 📂 hiring
+    │               └── 📂 workforcemgmt
+    │                   ├── 📂 common
+    │                   │   ├── 📂 exception
+    │                   │   │   ├── 📄 CustomExceptionHandler.java
+    │                   │   │   └── 📄 ResourceNotFoundException.java
+    │                   │   └── 📂 model
+    │                   │       ├── 📂 enums
+    │                   │       │   └── 📄 ReferenceType.java
+    │                   │       └── 📂 response
+    │                   ├── 📂 controller
+    │                   │   └── 📄 TaskManagementController.java
+    │                   ├── 📂 dto
+    │                   ├── 📂 mapper
+    │                   │   └── 📄 ITaskManagementMapper.java
+    │                   ├── 📂 model
+    │                   ├── 📂 repository
+    │                   ├── 📂 service
+    │                   │   ├── 📂 impl
+    │                   │   │   └── 📄 TaskManagementService.java
+    │                   │   └── 📄 TaskManagementService.java (interface)
+    │                   └── 📄 WorkforceMgmtApplication.java
+    └── 📂 resources
+        ├── 📄 application.properties
+        ├── 📂 static
+        └── 📂 templates
 
        
 

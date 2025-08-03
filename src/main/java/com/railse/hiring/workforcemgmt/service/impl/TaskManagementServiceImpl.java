@@ -123,10 +123,16 @@ public class TaskManagementServiceImpl implements TaskManagementService {
     public List<TaskManagementDto> fetchTasksByDate(TaskFetchByDateRequest request) {
         List<TaskManagement> tasks = taskRepository.findByAssigneeIdIn(request.getAssigneeIds());
 
-
-        // BUG #2 is here. It should filter out CANCELLED tasks but doesn't.
+   long start=request.getStartDate();
+   long end=request.getEndDate();
         List<TaskManagement> filteredTasks = tasks.stream()
-                .filter(task -> task.getStatus()!=TaskStatus.CANCELLED)
+                .filter(task -> task.getStatus()!=TaskStatus.CANCELLED &&
+                        (
+                                (task.getTaskDeadlineTime() >= start && task.getTaskDeadlineTime()<=end)
+                                ||
+                                        (task.getTaskDeadlineTime()< start && task.getStatus()!=TaskStatus.COMPLETED)
+                                )
+                )
                 .collect(Collectors.toList());
 
 

@@ -96,9 +96,14 @@ public class TaskManagementServiceImpl implements TaskManagementService {
             // Instead, it reassigns ALL of them.
             if (!tasksOfType.isEmpty()) {
                 for (TaskManagement taskToUpdate : tasksOfType) {
-                    taskToUpdate.setAssigneeId(request.getAssigneeId());
-                    taskRepository.save(taskToUpdate);
+                    if (!taskToUpdate.getAssigneeId().equals(request.getAssigneeId())) {
+                        taskToUpdate.setStatus(TaskStatus.CANCELLED);
+                        taskRepository.save(taskToUpdate);
+                    } else {
+                        return "Task already assigned to this assignee.";
+                    }
                 }
+
             } else {
                 // Create a new task if none exist
                 TaskManagement newTask = new TaskManagement();

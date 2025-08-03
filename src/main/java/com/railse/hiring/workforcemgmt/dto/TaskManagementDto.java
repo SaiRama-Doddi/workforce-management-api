@@ -4,12 +4,12 @@ package com.railse.hiring.workforcemgmt.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.railse.hiring.workforcemgmt.model.Priority;
+import com.railse.hiring.workforcemgmt.model.*;
 import com.railse.hiring.workforcemgmt.common.model.enums.ReferenceType;
 
-import com.railse.hiring.workforcemgmt.model.Task;
-import com.railse.hiring.workforcemgmt.model.TaskStatus;
 import lombok.Data;
+
+import java.util.List;
 
 
 @Data
@@ -24,6 +24,10 @@ public class TaskManagementDto {
     private Long assigneeId;
     private Long taskDeadlineTime;
     private Priority priority;
+
+
+    private List<Comment> comments;
+    private List<ActivityLog> history;
 }
 
 

@@ -28,20 +28,31 @@ This is a task-tracking API for managers and operations teams to create, assign,
 
 ## 📂 Project Structure
 
-```bash
-src/main/java/com/yourcompany/workforcemgmt/
-├── WorkforcemgmtApplication.java
-├── controller/
-│   └── TaskManagementController.java
-├── service/
-│   ├── TaskManagementService.java
-│   └── impl/TaskManagementServiceImpl.java
-├── model/
-│   └── TaskManagement.java
-│   └── enums/TaskStatus.java, TaskType.java, Priority.java
-├── dto/
-│   ├── TaskManagementDto.java
-│   ├── CreateTaskRequest.java
-│   └── AddCommentRequest.java
-└── repository/
-    └── TaskRepository.java
+src/
+└── main/
+    ├── java/
+    │   └── com.railse.hiring.workforcemgmt/
+    │       ├── common/
+    │       │   ├── exception/
+    │       │   │   ├── CustomExceptionHandler.java
+    │       │   │   └── ResourceNotFoundException.java
+    │       │   └── model/
+    │       │       ├── enums/
+    │       │       │   └── ReferenceType.java
+    │       │       └── response/    (for API response wrappers or response DTOs)
+    │       ├── controller/
+    │       │   └── TaskManagementController.java
+    │       ├── dto/                 (for Data Transfer Objects)
+    │       ├── mapper/              (MapStruct or manual mappers)
+    │       │   └── ITaskManagementMapper.java
+    │       ├── model/               (for JPA Entities)
+    │       ├── repository/          (Spring Data JPA Repositories)
+    │       ├── service/
+    │       │   ├── impl/
+    │       │   │   └── TaskManagementService.java
+    │       │   └── (interface for TaskManagementService)
+    │       └── WorkforceMgmtApplication.java
+    └── resources/
+        ├── application.properties (or application.yml)
+        └── static/, templates/, etc.
+
